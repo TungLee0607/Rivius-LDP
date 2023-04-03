@@ -1,0 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@300;400;500;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --colorWhite: white;
+    --colorGray: rgba(255, 255, 255, 0.8);
+    --colorBlack: black;
+    --colorGreen: #6DC8BF;
+    --bg: #0C071B;
+    --bg-gradient: linear-gradient(92.82deg, #6DC8BF 16.41%, #543C92 93.16%);
+    --smooth: all 0.4s;
+}

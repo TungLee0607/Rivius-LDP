@@ -1,0 +1,38 @@
+.footer {
+    padding: 48px 0;
+
+    &-social {
+        @include flexCenter;
+        gap: 32px;
+        margin-bottom: 32px;
+
+        img {
+            transition: all 0.2s;
+        }
+
+        img:hover {
+
+            filter: invert(0%) sepia(100%) saturate(0%) hue-rotate(106deg) brightness(102%) contrast(103%);
+        }
+    }
+
+    &-container {
+        @include flexSB;
+        padding-top: 32px;
+        border-top: 1px solid var(--colorGray);
+
+        @media (max-width: 1300px) {
+            flex-direction: column;
+            gap: 32px;
+        }
+    }
+
+    &-link {
+        @include flexCenter;
+        gap: 16px;
+
+        @include MinTabletMobile {
+            flex-wrap: wrap;
+        }
+    }
+}

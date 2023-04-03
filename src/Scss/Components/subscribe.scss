@@ -1,0 +1,86 @@
+.sub {
+    background: url('../../assets/images/bg-sub.png') left top / cover no-repeat;
+    margin-top: 110px;
+    @include flexSB;
+    align-items: flex-end;
+
+    // @include TabletMobile {
+    //     padding: 48px 32px;
+    // }
+
+    &-content {
+        max-width: 640px;
+        padding: 48px 64px;
+
+        @include TabletMobile {
+            max-width: 400px;
+        }
+
+        @include MinTabletMobile {
+            max-width: unset;
+        }
+
+        @include Mobile {
+            padding: 48px 32px;
+        }
+
+        h2 {
+            img {
+                margin-left: 16px;
+                width: 36px;
+            }
+        }
+
+        p {
+            margin: 32px 0;
+        }
+
+        a {
+            @include button;
+            display: inline-block;
+
+            &:hover {
+                text-decoration: none;
+                transform: scale(0.9);
+            }
+        }
+    }
+
+    &-image {
+        position: relative;
+        width: 400px;
+        padding-right: 50px;
+
+        &>img {
+            width: 350px;
+            display: block;
+        }
+
+        .diamond {
+            position: absolute;
+            bottom: 65%;
+            left: 43%;
+            transform: translateX(-50%);
+            animation: upTodown 1.5s linear infinite alternate;
+
+            img {
+                width: 300px;
+            }
+
+            @keyframes upTodown {
+                from {
+                    bottom: 65%;
+                }
+
+                to {
+                    bottom: 100%;
+                }
+            }
+        }
+
+        @include MinTabletMobile {
+            display: none;
+        }
+
+    }
+}

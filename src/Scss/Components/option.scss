@@ -1,0 +1,41 @@
+.option {
+    padding: 48px 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    @include TabletMobile {
+        grid-template-columns: 1fr 1fr;
+        row-gap: 32px;
+    }
+    @include Mobile {
+        grid-template-columns: 1fr;
+    }
+    &__item {
+        border-right: 1px solid var(--colorGray);
+        @include flexCenter;
+        flex-direction: column;
+        img {
+            height: 36px;
+            width: auto;
+        }
+        p {
+            color: var(--colorGreen);
+            text-transform: uppercase;
+            font-size: 14px;
+        }
+        h6 {
+            font-weight: 700;
+            font-size: 30px;
+        }
+        &:last-child {
+            border-right: 0;
+        }
+        @include TabletMobile {
+            &:nth-child(2) {
+                border-right: 0;
+            }
+        }
+        @include Mobile {
+            border-right: 0;
+        }
+    }
+}
