@@ -35,6 +35,11 @@
     &__content {
         width: 50%;
 
+        h1 {
+            font-weight: 500;
+            line-height: 1.5;
+        }
+
         @media (max-width: 800px) {
             max-width: 600px;
             width: auto;
@@ -212,10 +217,10 @@
             width: auto;
         }
 
-        // p {
+        p {
+            font-size: 14px;
+        }
 
-        //     font-size: 14px;
-        // }
         h6 {
             font-weight: 500;
             font-size: 24px;

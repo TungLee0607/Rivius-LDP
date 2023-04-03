@@ -36,11 +36,15 @@
     &-container {
         @include flexGap(50px);
         padding: 24px 0;
-
+        justify-content: space-between;
     }
 
     &-content {
-        width: 55%;
+        width: 45%;
+
+        @media (max-width: 1400px) {
+            width: 55%;
+        }
 
         @include MinTabletMobile {
             width: 100%;
@@ -93,7 +97,7 @@
         }
 
         &-image {
-            margin-bottom: 16px;
+            margin-bottom: 6px;
 
             img {
                 width: 44px;
@@ -103,6 +107,7 @@
         p {
             font-size: 16px;
             margin-bottom: 0;
+            margin-top: 20px;
         }
     }
 

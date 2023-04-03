@@ -1,18 +1,18 @@
-import React from "react";
-import arrow from "../../../assets/icons/arrow-up.svg";
-import arr from "../../../assets/icons/arrow.svg";
-import text from "../../../assets/icons/text.svg";
-import banner from "../../../assets/images/banner.png";
-import { useSizeObersver } from "../../../Hooks/SizeObserver";
-import { Autoplay, Navigation } from "swiper";
-import "swiper/css";
-import "swiper/css/navigation";
-import { Swiper, SwiperSlide } from "swiper/react";
-import { useTranslation } from "react-i18next";
+import React from 'react'
+import arrow from '../../../assets/icons/arrow-up.svg'
+import arr from '../../../assets/icons/arrow.svg'
+import text from '../../../assets/icons/text.svg'
+import banner from '../../../assets/images/banner.png'
+import { useSizeObersver } from '../../../Hooks/SizeObserver'
+import { Autoplay, Navigation } from 'swiper'
+import 'swiper/css'
+import 'swiper/css/navigation'
+import { Swiper, SwiperSlide } from 'swiper/react'
+import { useTranslation } from 'react-i18next'
 
 export default function Banner() {
-  const { innerWidth } = useSizeObersver();
-  const { t } = useTranslation();
+  const { innerWidth } = useSizeObersver()
+  const { t } = useTranslation()
 
   const listBanner = [
     {
@@ -27,7 +27,7 @@ export default function Banner() {
       id: 3,
       image: banner,
     },
-  ];
+  ]
 
   const renderListBanner = () => {
     return listBanner.map((item) => {
@@ -35,15 +35,19 @@ export default function Banner() {
         <SwiperSlide key={item.id}>
           <div className="banner__content">
             <h1 data-aos="fade-right" data-aos-duration="1000">
-              {t("The Most Easy-to-use Blockchain Network")}
+              {t('The Most')}
+              <br />
+              {t('Easy-to-use')}
+              <br />
+              {t('Blockchain Network')}
             </h1>
             <p data-aos="fade-right" data-aos-duration="1500">
               {t(
-                "We offers high returns to holders thanks to diversified portfolio investments connected to multiple Chains and real world."
+                "Blockchain Technology for Vietnam's digital economy. Transforming and expanding business in Rivius Network",
               )}
             </p>
             <div className="banner__content-button">
-              <button>{t("Explore more")}</button>
+              <button>{t('Explore more')}</button>
               <button>
                 Whitepaper <img src={arrow} alt="arrow" />
               </button>
@@ -65,9 +69,9 @@ export default function Banner() {
             </div>
           ) : null}
         </SwiperSlide>
-      );
-    });
-  };
+      )
+    })
+  }
 
   return (
     <div className="banner">
@@ -84,5 +88,5 @@ export default function Banner() {
         {renderListBanner()}
       </Swiper>
     </div>
-  );
+  )
 }
