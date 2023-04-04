@@ -1,38 +1,38 @@
-import React from "react";
-import plant from "../../../assets/icons/plant.svg";
-import price from "../../../assets/icons/price.svg";
-import flower from "../../../assets/icons/flower.svg";
-import { useTranslation } from "react-i18next";
+import React from 'react'
+import plant from '../../../assets/icons/plant.svg'
+import price from '../../../assets/icons/price.svg'
+import flower from '../../../assets/icons/flower.svg'
+import { useTranslation } from 'react-i18next'
 
 const listOption = [
   {
     image: plant,
-    title: "1. Long Term Sustainability",
-    content:
-      "Our fixed Apy is studied to be more sustainable than other Defi Projects.",
+    title: '1. Transaction speed',
+    content: 'Improve system performance and speed up transactions by 80%.',
   },
   {
     image: price,
-    title: "2. 10X-30X Less Inflationary",
-    content: "Eliminate intermediaries, reduce costs. Decentralized operations",
+    title: '2. User-friendly',
+    content:
+      'Eliminate intermediaries, reduce costs, and operate decentralize.',
   },
   {
     image: flower,
-    title: "3. High Sustainable APY",
+    title: '3. Absolute security',
     content:
-      "The server system specialized in storing data will be completely disconnected from the outside world. Optimize information security.",
+      'The private server system specializes in storing big data. Optimize cyber security.',
   },
-];
+]
 
 export default function Introduction() {
-  const { t } = useTranslation();
+  const { t } = useTranslation()
 
   return (
     <div className="introduction" data-aos="zoom-in" data-aos-duration="2000">
-      <h2>{t("Outstanding Blockchain Solution")}</h2>
+      <h2>{t('A Superior Blockchain Solution')}</h2>
       <p>
         {t(
-          "Pioneer in building Blockchain ecosystem for Vietnamese people. Rivius Network - multi-chain connection platform for applications on Web3"
+          'The pioneer in building Blockchain infrastructure for Vietnamese developers. Rivius Network - Multichain platform for Web3 applications',
         )}
       </p>
       <div className="introduction__list">
@@ -45,9 +45,9 @@ export default function Introduction() {
               <h6>{t(item.title)}</h6>
               <p>{t(item.content)}</p>
             </div>
-          );
+          )
         })}
       </div>
     </div>
-  );
+  )
 }

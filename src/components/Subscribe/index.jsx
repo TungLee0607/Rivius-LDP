@@ -11,11 +11,11 @@ export default function Subscribe() {
     <div className="sub">
       <div className="sub-content">
         <h2>
-          {t('Join community')} <img src={icon} alt="icon" />
+          {t('Join the community')} <img src={icon} alt="icon" />
         </h2>
         <p>
           {t(
-            'With a broad vision in the decentralized economy, Rivius Network will help your business transform to adapt to the 4.0 era.',
+            'Focus vision into decentralize economy, Rivius Network will help business transformation and adapt to industry 4.0',
           )}
         </p>
         <a href="/community">{t('Join now')}</a>
