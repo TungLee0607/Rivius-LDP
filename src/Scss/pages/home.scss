@@ -55,7 +55,7 @@
 
         p {
             padding: 32px 20px 32px 0;
-            font-size: 18px;
+            font-size: 16px;
             font-weight: 400;
             line-height: 30px;
         }
@@ -226,6 +226,10 @@
             padding: 40px;
         }
 
+        &-image {
+            padding-left: 10px;
+        }
+
         img {
             height: 60px;
             width: auto;
@@ -238,8 +242,10 @@
         h6 {
             font-weight: 500;
             font-size: 24px;
+            height: 60px;
             color: var(--colorGreen);
             margin: 32px 0;
+            padding-left: 10px;
 
             @include Mobile {
                 font-size: 20px;
@@ -275,7 +281,7 @@
         p {
             width: 50%;
             text-align: justify;
-            font-size: 20px;
+            font-size: 16px;
             line-height: 1.5;
 
             @include MinTabletMobile {
@@ -374,7 +380,7 @@
         p {
             width: 50%;
             text-align: justify;
-            font-size: 20px;
+            font-size: 16px;
             line-height: 1.5;
 
             @include MinTabletMobile {

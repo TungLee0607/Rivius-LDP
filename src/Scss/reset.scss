@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+
 .App {
   height: 100%;
   width: 100%;
@@ -18,7 +20,7 @@ body {
 }
 
 body {
-  font-family: "Be Vietnam Pro", sans-serif;
+  font-family: 'Inter', sans-serif;
   color: var(--colorWhite);
 }
 
@@ -116,6 +118,7 @@ h2 {
 
 html ::-webkit-scrollbar {
   height: 5px;
+  width: 5px;
   background-color: var(--colorGray);
   transition: var(--smooth);
 }
