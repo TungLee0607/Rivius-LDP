@@ -2,17 +2,23 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 import { useEffect } from "react";
 import { Route, Routes } from "react-router-dom";
+import "swiper/css";
+import "swiper/css/effect-fade";
+import "swiper/css/navigation";
+import "./Scss/main.scss";
 import Navbar from "./components/Navbar";
 import About from "./pages/About";
 import Community from "./pages/Community";
 import Home from "./pages/Home";
 import Project from "./pages/Project";
-import "./Scss/main.scss";
+
+if (process.env.NODE_ENV === "production") {
+  console.log = () => {};
+}
 
 function App() {
   useEffect(() => {
     AOS.init({
-      disable: "mobile",
       once: true,
       anchorPlacement: "bottom-bottom",
       animatedClassName: "aos-animate",

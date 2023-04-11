@@ -197,17 +197,17 @@ const Project = () => {
 
   useEffect(() => {
     window.addEventListener("scroll", (event) => {
-      let position1 = document.getElementById("1").offsetTop;
-      let height = document.getElementById("1").offsetHeight;
-      let position2 = document.getElementById("2").offsetTop;
-      let position3 = document.getElementById("3").offsetTop;
-      let position4 = document.getElementById("4").offsetTop;
-      let position5 = document.getElementById("5").offsetTop;
-      let position6 = document.getElementById("6").offsetTop;
-      let position7 = document.getElementById("7").offsetTop;
-      let position8 = document.getElementById("8").offsetTop;
-      let position9 = document.getElementById("9").offsetTop;
-      let position10 = document.getElementById("10").offsetTop;
+      let position1 = document.getElementById("1")?.offsetTop;
+      let height = document.getElementById("1")?.offsetHeight;
+      let position2 = document.getElementById("2")?.offsetTop;
+      let position3 = document.getElementById("3")?.offsetTop;
+      let position4 = document.getElementById("4")?.offsetTop;
+      let position5 = document.getElementById("5")?.offsetTop;
+      let position6 = document.getElementById("6")?.offsetTop;
+      let position7 = document.getElementById("7")?.offsetTop;
+      let position8 = document.getElementById("8")?.offsetTop;
+      let position9 = document.getElementById("9")?.offsetTop;
+      let position10 = document.getElementById("10")?.offsetTop;
       if (window.scrollY < position1 + height / 2) {
         setOption(1);
       } else if (window.scrollY < position2 + height / 2) {
@@ -230,22 +230,17 @@ const Project = () => {
         setOption(10);
       }
     });
-    return () => {
-      return window.removeEventListener("scroll", () => {
+    return () =>
+      window.removeEventListener("scroll", () => {
         console.log("remove event");
       });
-    };
   });
 
   return (
     <div className="project">
       <div className="project-title">
         <div className="container">
-          <h1
-            data-aos="fade-right"
-            data-aos-offset="500"
-            data-aos-easing="ease-in-sine"
-          >
+          <h1 data-aos="fade-right">
             {t("Project")} <img src={icon} alt="icon" />
           </h1>
         </div>

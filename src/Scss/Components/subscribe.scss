@@ -9,11 +9,12 @@
     // }
 
     &-content {
-        max-width: 640px;
+        max-width: 53%;
         padding: 48px 64px;
 
         @include TabletMobile {
-            max-width: 400px;
+            max-width: 56%;
+            padding: 48px 30px;
         }
 
         @include MinTabletMobile {
@@ -26,18 +27,25 @@
 
         h2 {
             img {
-                margin-left: 16px;
                 width: 36px;
             }
         }
 
         p {
             margin: 32px 0;
+            max-width: 77%;
+            font-style: normal;
+            font-weight: 400;
+            text-align: justify;
         }
 
         a {
             @include button;
             display: inline-block;
+            font-family: 'Aldrich', sans-serif;
+            font-weight: 400;
+            font-size: 20px;
+            line-height: 30px;
 
             &:hover {
                 text-decoration: none;
