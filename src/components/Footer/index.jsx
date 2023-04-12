@@ -7,6 +7,7 @@ import tiktok from '../../assets/icons/TikTok.svg'
 import telegram from '../../assets/icons/telegram.svg'
 import envelope from '../../assets/icons/envelope.svg'
 import logo from '../../assets/images/Logo.svg'
+import { useTranslation } from 'react-i18next'
 
 const listSocial = [
   {
@@ -96,17 +97,17 @@ const listFooter = [
   },
 ]
 
-const renderListFooter = () => {
-  return listFooter.map((item) => {
-    return (
-      <a href={item.link} key={item.id} className="footer-item">
-        {item.name}
-      </a>
-    )
-  })
-}
-
 export default function Footer() {
+  const { t } = useTranslation()
+  const renderListFooter = () => {
+    return listFooter.map((item) => {
+      return (
+        <a href={item.link} key={item.id} className="footer-item">
+          {t(item.name)}
+        </a>
+      )
+    })
+  }
   return (
     <div className="footer">
       <div className="footer-social">{renderListSocial()}</div>

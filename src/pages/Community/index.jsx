@@ -1,99 +1,99 @@
-import React from "react";
-import Footer from "../../components/Footer";
-import Option from "../../components/Option";
-import icon from "../../assets/icons/icon-project.svg";
-import Partner from "../../components/Partner";
-import twitter from "../../assets/icons/twitter-icon.svg";
-import telegram from "../../assets/icons/telegram-icon.svg";
-import reddit from "../../assets/icons/reddit-icon.svg";
-import youtube from "../../assets/icons/youtube-icon.svg";
-import discord from "../../assets/icons/discord-icon.svg";
-import github from "../../assets/icons/github-icon.svg";
-import community1 from "../../assets/images/community.jpeg";
-import community from "../../assets/images/community1.jpeg";
-import line from "../../assets/images/Line.png";
-import iconDown from "../../assets/icons/down.svg";
-import { useTranslation } from "react-i18next";
+import React from 'react'
+import Footer from '../../components/Footer'
+import Option from '../../components/Option'
+import icon from '../../assets/icons/icon-project.svg'
+import Partner from '../../components/Partner'
+import twitter from '../../assets/icons/twitter-icon.svg'
+import telegram from '../../assets/icons/telegram-icon.svg'
+import reddit from '../../assets/icons/reddit-icon.svg'
+import youtube from '../../assets/icons/youtube-icon.svg'
+import discord from '../../assets/icons/discord-icon.svg'
+import github from '../../assets/icons/github-icon.svg'
+import community1 from '../../assets/images/community.jpeg'
+import community from '../../assets/images/community1.jpeg'
+import line from '../../assets/images/Line.png'
+import iconDown from '../../assets/icons/down.svg'
+import { useTranslation } from 'react-i18next'
 
 const listCommunity = [
   {
     id: 1,
     image: telegram,
-    name: "Telegram",
-    link: "https://t.me/Therivius",
-    number: "~85,032 members",
-    target: "_blank",
+    name: 'Telegram',
+    link: 'https://t.me/Therivius',
+    number: '~85,032 members',
+    target: '_blank',
   },
   {
     id: 2,
     image: twitter,
-    name: "Twitter",
-    link: "https://twitter.com/Therivius",
-    number: "~2,247,235 members",
-    target: "_blank",
+    name: 'Twitter',
+    link: 'https://twitter.com/Therivius',
+    number: '~2,247,235 members',
+    target: '_blank',
   },
   {
     id: 3,
     image: discord,
-    name: "Discord",
-    link: "",
-    number: "~44,589 members",
-    target: "",
+    name: 'Discord',
+    link: '',
+    number: '~44,589 members',
+    target: '',
   },
   {
     id: 4,
     image: github,
-    name: "Github",
-    link: "",
-    number: "~9,672 stars",
-    target: "",
+    name: 'Github',
+    link: '',
+    number: '~9,672 stars',
+    target: '',
   },
   {
     id: 5,
     image: reddit,
-    name: "Reddit",
-    link: "",
-    number: "~8,247 subscribers",
-    target: "",
+    name: 'Reddit',
+    link: '',
+    number: '~8,247 subscribers',
+    target: '',
   },
   {
     id: 6,
     image: youtube,
-    name: "Youtube",
-    link: "",
-    number: "~9,189 subsribers",
-    target: "",
+    name: 'Youtube',
+    link: '',
+    number: '~9,189 subscribers',
+    target: '',
   },
-];
-
-const renderListCommunity = () => {
-  return listCommunity.map((item) => {
-    return (
-      <a
-        key={item.id}
-        className="community-item"
-        href={item.link}
-        target={item.target}
-      >
-        <div className="community-item-image">
-          <img src={item.image} alt={item.name} />
-        </div>
-        <h6>{item.name}</h6>
-        <p>{item.number}</p>
-      </a>
-    );
-  });
-};
+]
 
 export default function Community() {
-  const { t } = useTranslation();
+  const { t } = useTranslation()
+
+  const renderListCommunity = () => {
+    return listCommunity.map((item) => {
+      return (
+        <a
+          key={item.id}
+          className="community-item"
+          href={item.link}
+          target={item.target}
+        >
+          <div className="community-item-image">
+            <img src={item.image} alt={item.name} />
+          </div>
+          <h6>{item.name}</h6>
+          <p>{t(item.number)}</p>
+        </a>
+      )
+    })
+  }
 
   return (
     <div className="community">
       <div className="community-title">
         <div className="container">
           <h1 data-aos="fade-right">
-            {t("Community")} <img src={icon} alt="icon" />
+            {t('Community')} <img src={icon} alt="icon" />
           </h1>
         </div>
       </div>
@@ -101,10 +101,10 @@ export default function Community() {
         <Option />
         <div className="community-container">
           <div className="community-content">
-            <h2>{t("VBI Community")}</h2>
+            <h2>{t('VBI Community')}</h2>
             <p>
               {t(
-                "VBI community (Vietnam Blockchain Institute) is the “common home” of thousands of technology experts and developers with the common goal of applying Blockchain technology to innovate businesses."
+                'VBI community (Vietnam Blockchain Institute) is the “common home” of thousands of technology experts and developers with the common goal of applying Blockchain technology to innovate businesses.',
               )}
             </p>
             <div className="community-button">
@@ -143,10 +143,10 @@ export default function Community() {
             </div>
           </div>
           <div className="community-content">
-            <h2>{t("Rivius Community")}</h2>
+            <h2>{t('Rivius Community')}</h2>
             <p>
               {t(
-                "Join the discussion on different topics, to explore collaboration opportunities as well as collaborate on Rivius projects"
+                'Join the discussion on different topics, to explore collaboration opportunities as well as collaborate on Rivius projects',
               )}
             </p>
             <div className="community-button">
@@ -161,5 +161,5 @@ export default function Community() {
         <Footer />
       </div>
     </div>
-  );
+  )
 }
